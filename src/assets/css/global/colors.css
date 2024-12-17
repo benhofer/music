@@ -1,0 +1,118 @@
+html {
+    background: black;
+    color: white;
+    transition: background-color .6s;
+}
+
+a {
+    color: white;
+}
+
+body {
+    background: black;
+}
+
+.gels, .gels div {
+    height: 100vh; 
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1;
+    transition: background-color .7s ease-out, opacity .7s ease-out;
+}
+
+.gels img {
+    transition: opacity .2s;
+    opacity: 0;
+}
+.gels.welcome img {
+    opacity: 1; 
+}
+
+.meditation-page img {
+    opacity: 0;
+}
+
+html, .solid {
+    transition: background-color .6s;
+}
+
+.gels {
+    background: white;
+}
+
+.outermost {
+    background: #141414;
+}
+
+body:hover .outermost, body:focus .outermost {
+    background-color: #1b1a1c;
+    /* background: black; */
+}
+
+.outer {
+    background-image: conic-gradient( transparent 0deg, black 180deg, transparent 360deg);
+}
+
+.inner {
+    background-image: radial-gradient(circle at center, rgba(27, 26, 28, .75) 0%,  rgba(27, 26, 28, .25) 5%, transparent 26%);
+}
+
+.purple .innermost {
+    background-color: rgba(77, 1, 77, .12);
+}
+
+.blue .innermost {
+    background-color: rgba(11, 23, 55, .33);
+}
+
+.gold .innermost {
+    background-color: rgba(237, 188, 1, 0.08);
+}
+
+.red .innermost {
+    background-color: rgba(100, 30, 10, 0.18);
+}
+
+.black .innermost {
+    background-color: rgba(3, 1, 6, 0.13);
+}
+
+.press.purple .innermost {
+    background-color: rgba(77, 1, 77, .26);
+}
+
+.press.blue .innermost{
+    background-color: rgba(11, 23, 55, .44);
+}
+
+.press.gold .innermost{
+    background-color: rgba(237, 188, 1, 0.12);
+}
+
+.press.red .innermost{
+    background-color: rgba(100, 30, 10, 0.26);
+}
+
+.press .innermost {
+    background-color: none;
+}
+
+.main-content {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.press .main-content {
+    opacity: .75;
+}
+
+.engaged .main-content  {
+    opacity: 1;
+}
+
+body:hover .main-nav, body:focus .main-nav,
+body:hover .sub-footer, body:focus .sub-footer {
+    opacity: 1; 
+}

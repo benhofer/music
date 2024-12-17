@@ -1,0 +1,50 @@
+
+.browse_links {
+    display: flex;
+    justify-content: center;
+    padding-left:0;
+}
+
+.browse_links li {
+    list-style: none;
+    padding: 0;
+}
+
+.browse_link, .browse_heading {
+    padding: 1.375rem 2rem;
+    margin-bottom: 2.75rem;
+    color: white;
+    text-decoration: none;
+    font-size: 13.33333px;
+    line-height: 2.75rem; 
+    margin-top:0;
+    font-weight: 500;
+}
+
+.browse_heading {
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+
+@media screen and (max-height: 600px) {
+    .browse_heading {
+        display: none;
+    }
+    .browse_link {
+        padding: 1.375rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .browse_link {
+        padding: .5rem;
+    }
+}
+
+.browse_link:hover, .browse_link:focus {
+    background: rgba(255,255,255,.075);
+    cursor: pointer;
+}

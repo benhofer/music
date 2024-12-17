@@ -1,0 +1,29 @@
+
+.card {
+    opacity: .75;
+    border: 1px solid rgba(255, 255, 255, .2);
+    transition: opacity .2s;
+    padding: 1.375rem 1.375rem 2.75rem;
+    margin-bottom: 1.375rem;
+    overflow-y: auto;
+    border-radius: 2px;
+    transition: opacity .2s ease-in, border-color .2s ease-in, background-color .2s ease-in;
+}
+
+.card:hover, .card:focus {
+    opacity: 1;
+    border-color: white;
+}
+
+.card * {
+    color: white;
+}
+
+.intro {
+    border: none;
+    opacity: 1;
+}
+
+.card.intro:hover, .card.intro:focus {
+    background-color: transparent;
+}

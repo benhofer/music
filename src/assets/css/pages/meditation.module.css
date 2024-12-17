@@ -1,0 +1,38 @@
+.gels {
+    z-index: 0;
+    position: relative;
+}
+
+.wrapper {
+    padding: 2rem;
+    height: 100%;
+}
+
+.wrapper h1, .attribution, .time {
+    text-align: center;
+}
+
+.time {
+    font-size: 1.5rem;
+    line-height: 2.75rem;
+    padding: 2.75rem;
+}
+
+
+.shim {
+    left: calc(50vw - 5px);
+    top: calc(50vh - 5px);
+    position: absolute;
+    width: 200px;
+    height: 200px; 
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+
+.back_btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
