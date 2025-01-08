@@ -83,16 +83,22 @@
 }
 
 .gels img {
-  width: 100px; 
   display: block;
-  margin: calc(50vh - 80px) auto;
+  margin: 190px 3rem 3rem;
+  width: calc(100vw - 6rem);
+}
+
+@media screen and (max-width: 1496px) {
+  .gels img {
+    width: 1400px;
+    margin: 190px 0 3rem;
+    position: relative;
+    left: calc((100vw - 1496px)/2);
+  }
 }
 
 @media screen and (max-height: 600px) {
-  .gels img {
-    width: 40px;
-    margin: calc(50vh - 20px) auto;
-  }
+
 }
 
 .meditation-cards {

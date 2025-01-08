@@ -19,6 +19,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import cross from "./assets/img/cross.svg";
+import coverImg from "./assets/img/cover-img.jpg";
 
 const browseLinks = [
   {
@@ -53,13 +54,13 @@ export default function App() {
 function AnimationApp() {
   const [engagement, setEngagement] = useState("welcome");
   const [colorClass, setColorClass] = useState("gold");
-  const [bgImg, setBgImg] = useState({ src: cross, alt: "The Cross" });
+  const [bgImg, setBgImg] = useState({ src: coverImg, alt: "Benjamin Hofer" });
   const [showCurious, setShowCurious] = useState(false);
 
   let location = useLocation();
 
   function goHome() {
-    setBgImg({ src: cross, alt: "The Cross" });
+    setBgImg({ src: coverImg, alt: "Benjamin Hofer" });
     setEngagement("welcome");
     setColorClass("gold");
   }
