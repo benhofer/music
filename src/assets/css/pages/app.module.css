@@ -23,6 +23,9 @@ body:hover .header a:focus {
     display: block;
     font-weight: 100;
 }
+.subheader {
+    font-size: 1.4rem;
+}
 
 .header div {
     font-weight: 100;
