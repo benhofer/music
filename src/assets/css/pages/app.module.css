@@ -13,6 +13,8 @@ body:hover .header a:focus {
     position: absolute;
     width: 100%;
     bottom: 12vh;
+    z-index:10;
+    background: #000;
 }
 
 .header h1 {

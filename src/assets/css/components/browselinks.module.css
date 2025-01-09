@@ -19,6 +19,8 @@
     line-height: 2.75rem; 
     margin-top:0;
     font-weight: 500;
+    word-break: keep-all;
+    white-space: nowrap;
 }
 
 .browse_heading {

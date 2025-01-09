@@ -54,6 +54,14 @@
 .push {
   height: 80px;
 }
+.content {
+  max-width: 600px;
+  margin: 3rem auto;
+  max-height: 405px;
+  padding: 1rem;
+  height: calc(100vh - 340px);
+  /* border: 1px solid white; */
+}
 .page-footer{  
   padding: 0 1rem;
   z-index: 2;

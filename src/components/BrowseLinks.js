@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "../assets/css/components/browselinks.module.css";
 import { NavLink } from "react-router-dom";
 
@@ -7,15 +7,26 @@ function BrowseLinks(props) {
     <div className='browse-links' style={{ flexWrap: "wrap" }}>
       <ul className={styles.browse_links}>
         <li>
-          <span
-            className={`${styles.browse_link} subtitle2`}
-            onClick={() => props.setShowCurious()}
+          <NavLink
+            className={styles.browse_link}
+            to={"/app/about"}
+            onClick={() => {
+              props.setColorClass("blue");
+              props.setBgOpacity(0.1);
+            }}
           >
             About
-          </span>
+          </NavLink>
         </li>{" "}
         <li>
-          <NavLink className={styles.browse_link} to={"/app/browse?filter="}>
+          <NavLink
+            className={styles.browse_link}
+            to={"/app/shows"}
+            onClick={() => {
+              props.setColorClass("red");
+              props.setBgOpacity(0.1);
+            }}
+          >
             Shows
           </NavLink>
         </li>{" "}
@@ -36,7 +47,7 @@ function BrowseLinks(props) {
             target='_blank'
             rel='noreferrer'
           >
-            Music
+            Bandcamp
           </a>
         </li>{" "}
         <li>
@@ -46,7 +57,7 @@ function BrowseLinks(props) {
             target='_blank'
             rel='noreferrer'
           >
-            Videos
+            Instagram
           </a>
         </li>{" "}
         <li>

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Search from "./pages/Search";
-import Meditations from "./pages/Meditations";
+import React, { useState, useEffect } from "react";
+import About from "./pages/About";
+import Shows from "./pages/Shows";
 import BrowseLinks from "./components/BrowseLinks";
 import styles from "./assets/css/pages/app.module.css";
 import "./assets/css/global/main.css";
@@ -9,16 +9,15 @@ import "./assets/css/global/colors.css";
 import "./assets/css/global/grid.css";
 import "./assets/css/utilities/util.css";
 import "./assets/css/objects/objects.css";
+import { NavLink } from "react-router-dom";
 import Gels from "./components/Gels";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import {
   BrowserRouter as Router,
-  Switch,
-  Redirect,
+  Navigate,
+  Routes,
   Route,
-  useLocation,
 } from "react-router-dom";
-import cross from "./assets/img/cross.svg";
+// import cross from "./assets/img/cross.svg";
 import coverImg from "./assets/img/cover-img.jpg";
 
 const browseLinks = [
@@ -37,113 +36,81 @@ const browseLinks = [
 ];
 
 export default function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Redirect to='/app' />
-        </Route>
-        <Route path='*'>
-          <AnimationApp />
-        </Route>
-      </Switch>
-    </Router>
-  );
-}
-
-function AnimationApp() {
   const [engagement, setEngagement] = useState("welcome");
   const [colorClass, setColorClass] = useState("gold");
-  const [bgImg, setBgImg] = useState({ src: coverImg, alt: "Benjamin Hofer" });
-  const [showCurious, setShowCurious] = useState(false);
+  const [bgImg] = useState({ src: coverImg, alt: "Benjamin Hofer" });
+  const [bgOpacity, setBgOpacity] = useState(1);
+  const location = document.location.href;
 
-  let location = useLocation();
-
-  function goHome() {
-    setBgImg({ src: coverImg, alt: "Benjamin Hofer" });
-    setEngagement("welcome");
-    setColorClass("gold");
-  }
+  useEffect(() => {
+    if (location.endsWith("app")) {
+      setColorClass("gold");
+      setBgOpacity(1);
+    }
+  }, [setColorClass, setBgOpacity, location]);
 
   return (
-    <div>
-      <TransitionGroup>
-        {/*
-              This is no different than other usage of
-              <CSSTransition>, just make sure to pass
-              `location` to `Switch` so it can match
-              the old location as it animates out.
-            */}
-        <CSSTransition key={location.key} classNames='fade' timeout={300}>
-          <Gels color={colorClass} engagement={engagement} img={bgImg} />
-        </CSSTransition>
-      </TransitionGroup>
+    <Router>
+      <Gels
+        color={colorClass}
+        engagement={engagement}
+        img={bgImg}
+        bgOpacity={bgOpacity}
+      />
 
       <div id='main' className={`main`}>
-        {showCurious && (
-          <div className={styles.curious} onClick={() => setShowCurious(false)}>
-            <div>
-              <h1>About Tempora</h1>
-              <p>
-                Tempora provides resources for the practice of centering prayer.
-              </p>
-              <p>
-                "Centering Prayer is a receptive method of Christian silent
-                prayer that prepares us to receive the gift of contemplative
-                prayer, prayer in which we experience God’s presence within us,
-                closer than breathing, closer than thinking, closer than
-                consciousness itself."
-              </p>
-              <p>
-                &mdash;{" "}
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  href='https://www.contemplativeoutreach.org/centering-prayer-method/'
-                >
-                  Learn more at ContemplativeOutreach.org
-                </a>
-              </p>
-            </div>
+        <header className={`${styles.header} app-header home`}>
+          <div>
+            <NavLink
+              to={"/app"}
+              onClick={() => {
+                setColorClass("gold");
+                setBgOpacity(1);
+              }}
+              style={{ textDecoration: "none" }}
+            >
+              <span className={`${styles.subheader}`}>The Music of</span>
+              <h1>BENJAMIN HOFER</h1>
+            </NavLink>
           </div>
-        )}
-        <Router>
-          <Switch>
-            <Route
-              path='/app/:m'
-              children={
-                <Meditations
-                  browseLinks={browseLinks}
-                  goHome={goHome}
-                  setColor={(c) => setColorClass(c)}
-                  setEngagement={setEngagement}
-                />
-              }
-            />
-            <Route exact path='/app'>
-              <div>
-                <header className={`${styles.header} app-header home`}>
-                  <div onClick={() => setShowCurious(true)}>
-                    <span className={`${styles.subheader}`}>The Music of</span>
-                    <h1>BENJAMIN HOFER</h1>
-                  </div>
-                </header>
-                <Search />
-                <div className={styles.browse_section}>
-                  <BrowseLinks
-                    links={browseLinks}
-                    setShowCurious={() => setShowCurious(true)}
-                    heading={true}
-                  />
-                </div>
-              </div>
-            </Route>
-          </Switch>
-        </Router>
-
-        <div className='push'></div>
+        </header>
+        <Routes>
+          <Route
+            exact
+            path='/app'
+            element={<Navigate to='/app' replace />}
+          ></Route>
+          <Route
+            path='/app/about'
+            element={
+              <About
+                setColor={(c) => setColorClass(c)}
+                setBgOpacity={(o) => setBgOpacity(o)}
+                setEngagement={setEngagement}
+              />
+            }
+          />
+          <Route
+            path='/app/shows'
+            element={
+              <Shows
+                setColor={(c) => setColorClass(c)}
+                setBgOpacity={(o) => setBgOpacity(o)}
+                setEngagement={setEngagement}
+              />
+            }
+          />
+        </Routes>
       </div>
 
+      <div className={styles.browse_section}>
+        <BrowseLinks
+          links={browseLinks}
+          heading={true}
+          setColorClass={(c) => setColorClass(c)}
+          setBgOpacity={(o) => setBgOpacity(o)}
+        />
+      </div>
       <footer className={`${styles.footer} page-footer`}>
         <div className='lower-footer'>
           <div className='u-text-center'>
@@ -152,6 +119,6 @@ function AnimationApp() {
           </div>
         </div>
       </footer>
-    </div>
+    </Router>
   );
 }
