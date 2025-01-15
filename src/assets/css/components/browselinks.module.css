@@ -33,7 +33,7 @@
 }
 
 .links_btn {
-    display: block;
+    display: none;
     height: 5rem;
     width: 100%;
 }
@@ -65,6 +65,9 @@
 }
 
 @media screen and (max-width: 700px) {
+    .links_btn {
+        display: block;
+    }
     .browse_links {
         display: block;
     }
@@ -76,5 +79,11 @@
         display: block;
         text-align :center;
         margin-bottom: 0;
+    }
+    .nav_on {
+        display: block;
+    }
+    .nav_off {
+        display: none;
     }
 }
