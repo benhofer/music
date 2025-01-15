@@ -104,21 +104,18 @@ export default function App() {
         </Routes>
       </div>
 
-      <div className={styles.browse_section}>
-        <BrowseLinks
-          navOn={navOn}
-          setNavOn={(b) => setNavOn(b)}
-          links={browseLinks}
-          heading={true}
-          setColorClass={(c) => setColorClass(c)}
-          setBgOpacity={(o) => setBgOpacity(o)}
-        />
-      </div>
-      <footer
-        className={`${styles.footer} page-footer`}
-        onClick={() => setNavOn(false)}
-      >
-        <div className='lower-footer'>
+      <footer className={`${styles.footer} page-footer`}>
+        <div className={styles.browse_section}>
+          <BrowseLinks
+            navOn={navOn}
+            setNavOn={(b) => setNavOn(b)}
+            links={browseLinks}
+            heading={true}
+            setColorClass={(c) => setColorClass(c)}
+            setBgOpacity={(o) => setBgOpacity(o)}
+          />
+        </div>
+        <div className='lower-footer' onClick={() => setNavOn(false)}>
           <div className='u-text-center'>
             Let everything that has breath praise the LORD! Praise the LORD!{" "}
             <i style={{ display: "block" }}>Psalm 150:6</i>

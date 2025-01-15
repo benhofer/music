@@ -12,7 +12,7 @@ body:hover .header a:focus {
 .browse_section {
     position: absolute;
     width: 100%;
-    bottom: 8rem;
+    bottom: 12rem;
     z-index:10;
     background: #000;
 }

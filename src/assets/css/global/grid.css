@@ -63,10 +63,10 @@
   overflow-y: auto; 
 }
 .page-footer{  
-  padding: 2rem;
+  padding: 2rem 0;
   z-index: 2;
   position: relative;
-  height: 10rem;
+  height: 12rem;
   font-size: 13.333px;
 }
 .page-footer nav {
