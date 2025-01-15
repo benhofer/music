@@ -63,10 +63,10 @@
   /* border: 1px solid white; */
 }
 .page-footer{  
-  padding: 0 1rem;
+  padding: 2rem;
   z-index: 2;
   position: relative;
-  height: 80px;
+  height: 10rem;
   font-size: 13.333px;
 }
 .page-footer nav {
@@ -86,7 +86,13 @@
     padding-top: 0;
   }
   .lower-footer {
-    padding-top: 20px;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .page-footer {
+    background: black;
   }
 }
 
