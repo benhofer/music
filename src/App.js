@@ -39,6 +39,7 @@ export default function App() {
   const [engagement, setEngagement] = useState("welcome");
   const [colorClass, setColorClass] = useState("gold");
   const [bgImg] = useState({ src: coverImg, alt: "Benjamin Hofer" });
+  const [navOn, setNavOn] = useState(false);
   const [bgOpacity, setBgOpacity] = useState(1);
   const location = document.location.href;
 
@@ -58,7 +59,7 @@ export default function App() {
         bgOpacity={bgOpacity}
       />
 
-      <div id='main' className={`main`}>
+      <div id='main' className={`main`} onClick={() => setNavOn(false)}>
         <header className={`${styles.header} app-header home`}>
           <div>
             <NavLink
@@ -105,13 +106,18 @@ export default function App() {
 
       <div className={styles.browse_section}>
         <BrowseLinks
+          navOn={navOn}
+          setNavOn={(b) => setNavOn(b)}
           links={browseLinks}
           heading={true}
           setColorClass={(c) => setColorClass(c)}
           setBgOpacity={(o) => setBgOpacity(o)}
         />
       </div>
-      <footer className={`${styles.footer} page-footer`}>
+      <footer
+        className={`${styles.footer} page-footer`}
+        onClick={() => setNavOn(false)}
+      >
         <div className='lower-footer'>
           <div className='u-text-center'>
             Let everything that has breath praise the LORD! Praise the LORD!{" "}

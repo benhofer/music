@@ -1,4 +1,6 @@
 
+
+
 .browse_links {
     display: flex;
     justify-content: center;
@@ -30,6 +32,17 @@
     font-style: italic;
 }
 
+.links_btn {
+    display: block;
+    height: 5rem;
+    width: 100%;
+}
+
+.links_btn img {
+    margin: 0 auto;
+    width: 5rem;
+    height: 5rem;
+}
 
 @media screen and (max-height: 600px) {
     .browse_heading {
@@ -49,4 +62,19 @@
 .browse_link:hover, .browse_link:focus {
     background: rgba(255,255,255,.075);
     cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .browse_links {
+        display: block;
+    }
+    .browse_links li  {
+        display: block; 
+    }
+    .browse_link {
+        width: 100%;
+        display: block;
+        text-align :center;
+        margin-bottom: 0;
+    }
 }
