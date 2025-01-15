@@ -81,6 +81,10 @@
   line-height: 26px;
 }
 
+.lower-footer {
+  padding: 0 3rem;
+}
+
 @media screen and (max-height: 600px) {
   .app-header.home {
     padding-top: 0;
