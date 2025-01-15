@@ -63,7 +63,7 @@ function BrowseLinks(props) {
         <li>
           <a
             className={styles.browse_link}
-            href='https://www.themusicofbenjaminhofer.com'
+            href='https://gmail.us11.list-manage.com/subscribe?u=6a351b2bd64ec3d2dea2428f3&id=051a8a4d80'
             target='_blank'
             rel='noreferrer'
           >
