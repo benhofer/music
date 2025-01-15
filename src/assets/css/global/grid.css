@@ -60,7 +60,7 @@
   max-height: 405px;
   padding: 1rem;
   height: calc(100vh - 340px);
-  /* border: 1px solid white; */
+  overflow-y: auto; 
 }
 .page-footer{  
   padding: 2rem;
