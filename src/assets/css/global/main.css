@@ -181,6 +181,14 @@
   .clearfix::after {
     clear: both;
   }
+
+
+  /* Tables */
+    td, th {
+      padding: .5rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,.5)
+    }
   
   /* ==========================================================================
      EXAMPLE Media Queries for Responsive Design.
@@ -247,6 +255,8 @@
       border: 1px solid #999;
       page-break-inside: avoid;
     }
+
+  
   
     /*
      * Printing Tables:
