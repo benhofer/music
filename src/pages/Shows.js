@@ -32,10 +32,10 @@ function Shows(props) {
         </thead>
         <tbody>
           <tr>
-            <td>the Bull</td>
-            <td>18 SW 1st Ave, Gainesville, FL 32601</td>
-            <td>Saturday, March 22</td>
-            <td>8:00pm</td>
+            <td>Creek's 19th Hole Restaurant</td>
+            <td>11400 Turkey Creek Blvd, Alachua, FL 32615</td>
+            <td>Saturday, April 19</td>
+            <td>6 - 9pm</td>
           </tr>
 
           <tr>
