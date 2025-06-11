@@ -19,9 +19,8 @@ function Shows(props) {
   return (
     <div className='content'>
       <h2>Upcoming Shows</h2>
-      {/*<p>No upcoming shows at this time. Please check back soon!</p>*/}
-      {/* <ul className={styles.showsList}> */}
-      <table style={{ width: "100%" }}>
+      <p>No upcoming shows at this time. Please check back soon!</p>
+      {/* <table style={{ width: "100%" }}>
         <thead>
           <tr>
             <th>Venue</th>
@@ -51,7 +50,7 @@ function Shows(props) {
             <td>12 - 3pm</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 }
