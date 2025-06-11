@@ -12,7 +12,7 @@ function About(props) {
 
   return (
     <div className='content'>
-      <h1>Soundscape of Praise</h1>
+      <h2>Soundscape of Praise</h2>
       <p>
         Earth, the planet on which we dwell, was created to embody a wondrous
         soundscape of praise. All the trees of the field will clap their hands!
