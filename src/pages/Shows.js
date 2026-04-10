@@ -19,8 +19,8 @@ function Shows(props) {
   return (
     <div className='content'>
       <h2>Upcoming Shows</h2>
-      <p>No upcoming shows at this time. Please check back soon!</p>
-      {/* <table style={{ width: "100%" }}>
+      {/* <p>No upcoming shows at this time. Please check back soon!</p> */}
+      <table style={{ width: "100%" }}>
         <thead>
           <tr>
             <th>Venue</th>
@@ -33,9 +33,22 @@ function Shows(props) {
           <tr>
             <td>Creek's 19th Hole Restaurant</td>
             <td>11400 Turkey Creek Blvd, Alachua, FL 32615</td>
+            <td>Sunday, April 12</td>
+            <td>1 - 4pm</td>
+          </tr>
+          <tr>
+            <td>Blackadder Brewing</td>
+            <td>618 NW 60th St Suite A, Gainesville, FL 32607</td>
+            <td>Saturday, April 25</td>
+            <td>7pm</td>
+          </tr> 
+          {/*
+          <tr>
+            <td>Creek's 19th Hole Restaurant</td>
+            <td>11400 Turkey Creek Blvd, Alachua, FL 32615</td>
             <td>Saturday, April 19</td>
             <td>6 - 9pm</td>
-          </tr>
+          </tr> 
 
           <tr>
             <td>One Love Cafe (Farmer's Market)</td>
@@ -48,9 +61,9 @@ function Shows(props) {
             <td>4989 Northwest 40th Place, Gainesville, FL 32606</td>
             <td>Saturday, June 7</td>
             <td>12 - 3pm</td>
-          </tr>
+          </tr> */}
         </tbody>
-      </table> */}
+      </table>
     </div>
   );
 }
