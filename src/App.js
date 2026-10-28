@@ -70,8 +70,9 @@ export default function App() {
               }}
               style={{ textDecoration: "none" }}
             >
-              <span className={`${styles.subheader}`}>The Music of</span>
-              <h1>BENJAMIN HOFER</h1>
+              <h1>
+                <span className={`${styles.subheader}`}>The Music of</span>
+                <div>BENJAMIN HOFER</div></h1>
             </NavLink>
           </div>
         </header>

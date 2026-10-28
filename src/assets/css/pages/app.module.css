@@ -27,6 +27,8 @@ body:hover .header a:focus {
 }
 .subheader {
     font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: block;
 }
 
 .header div {
